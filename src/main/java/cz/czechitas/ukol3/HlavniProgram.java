@@ -6,8 +6,43 @@ package cz.czechitas.ukol3;
 public class HlavniProgram {
 
     public static void main(String... args) {
-        //TODO tady bude váš kód - vytvoření instance třídy Pocitac, zapnutí, vpynutí, výpis hodnot.
-        System.out.println("Program spuštěn.");
+
+        Pocitac mujPocitac = new Pocitac();
+        System.out.println(mujPocitac.toString());
+
+        mujPocitac.zapniSe();
+
+        Procesor mujProcesor = new Procesor();
+        mujProcesor.setRychlost(2_600_000_000L);
+        mujProcesor.setVyrobce("Intel");
+
+        Pamet mojePamet = new Pamet();
+        mojePamet.setKapacita(12_000_000_000L);
+
+        Disk mujDisk = new Disk();
+        mujDisk.setKapacita(200_000_000_000L);
+        mujDisk.setVyuziteMisto(55_000_000_000L);
+
+        mujPocitac.setCpu(mujProcesor);
+        mujPocitac.setRam(mojePamet);
+        mujPocitac.setPevnyDisk(mujDisk);
+
+        mujPocitac.zapniSe();
+        mujPocitac.zapniSe();      // Vypise chybu, protoze pocitac uz bezi
+        System.out.println(mujPocitac.toString());
+        mujPocitac.vypniSe();
+
+        mujPocitac.vypniSe();      // Nevypise chybu, ale nic neprovede,
+        mujPocitac.vypniSe();      // protoze pocitac je uz vypnuty
+
+
+       System.out.println(mujPocitac.toString());
+
+       System.out.println(mujPocitac.getCpu());
+
+       //System.out.println("Program spuštěn.");
     }
 
-}
+    }
+
+
