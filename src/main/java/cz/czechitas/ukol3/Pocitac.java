@@ -58,7 +58,7 @@ public class Pocitac {
     }
     public void vypniSe() {
         if (this.jeZapnuty == false) {
-            System.out.println("Pocitac uz byl vypnuty!");
+            System.out.println("Pocitac byl zapnuty!");
             return;
         }
         System.out.println("Pocitac se vypnul");
@@ -66,6 +66,10 @@ public class Pocitac {
         return;
     }
     public void vytvorSouborOVelikosti(long velikost) {
+        if (this.jeZapnuty == false) {
+            System.out.println("Pocitac je vypnuty. Nelze nahrat soubor.");
+            return;
+        }
         if ( ( pevnyDisk.getKapacita() - pevnyDisk.getVyuziteMisto() - velikost ) < 0 ) {
             System.out.println("Nelze vytvorit soubor o velikosti " + velikost + ". Nedostatek mista.");
             return;

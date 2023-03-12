@@ -44,6 +44,8 @@ public class HlavniProgram {
 
        System.out.println(mujPocitac.getCpu());
 
+       mujPocitac.zapniSe();
+
        mujPocitac.vytvorSouborOVelikosti(55_000_000_000L);
        mujPocitac.vytvorSouborOVelikosti(300_000_000_000L);
 
