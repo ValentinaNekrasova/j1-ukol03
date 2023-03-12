@@ -65,5 +65,18 @@ public class Pocitac {
         jeZapnuty = false;
         return;
     }
+    public void vytvorSouborOVelikosti(long velikost) {
+        if ( ( pevnyDisk.getKapacita() - pevnyDisk.getVyuziteMisto() - velikost ) < 0 ) {
+            System.out.println("Nelze vytvorit soubor o velikosti " + velikost + ". Nedostatek mista.");
+            return;
+        }
+        pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto() - velikost);
+        System.out.println("Soubor o velikosti " + velikost + " vytvoren.");
+        return;
+    }
+
+    public void vymazSouboryOVelikosti(long velikost) {
+        return;
+    }
 }
 

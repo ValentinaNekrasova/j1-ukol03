@@ -23,6 +23,10 @@ public class HlavniProgram {
         mujDisk.setKapacita(200_000_000_000L);
         mujDisk.setVyuziteMisto(55_000_000_000L);
 
+        //Disk mujDisk2 = new Disk ();
+        //mujDisk2.setKapacita(1000_000_000_000L);
+        //mujDisk2.setVyuziteMisto(0);// prazdny
+
         mujPocitac.setCpu(mujProcesor);
         mujPocitac.setRam(mojePamet);
         mujPocitac.setPevnyDisk(mujDisk);
@@ -40,9 +44,12 @@ public class HlavniProgram {
 
        System.out.println(mujPocitac.getCpu());
 
+       mujPocitac.vytvorSouborOVelikosti(55_000_000_000L);
+       mujPocitac.vytvorSouborOVelikosti(300_000_000_000L);
+
        //System.out.println("Program spuštěn.");
     }
 
-    }
+}
 
 
